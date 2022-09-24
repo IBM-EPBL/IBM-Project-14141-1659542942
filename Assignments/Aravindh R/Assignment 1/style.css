@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+body {
+    height: 70vh;
+    width: 90%;
+    background-image: url(Layer\ 4.png);
+    background-position: center;
+    text-align: justify;
+    background-size: cover;
+}
+
+.main {
+    margin: 60px 100px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main h1 {
+    color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    padding-top: 0px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main h2 {
+    color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main p {
+    color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main hr {
+    width: 0%;
+    min-width: 25%;
+    margin: 0 0;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.b {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 10px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    align-items: center;
+}
+
+.bt-sec {
+    color: rgb(46, 46, 46);
+    transition: all 0.5s;
+    position: relative;
+    padding: 10px 20px;
+    padding-left: 50px;
+}
+
+.bt-sec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.bt-sec:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.bt-sec::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.2, 1.2);
+}
+
+.bt-sec:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
