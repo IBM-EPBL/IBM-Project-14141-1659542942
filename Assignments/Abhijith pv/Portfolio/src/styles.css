@@ -1,0 +1,190 @@
+body {
+  font-family: "Oxygen", sans-serif;
+}
+section {
+  background-color: white;
+}
+.hero {
+  background-image: url("https://www.teachers.ab.ca/SiteCollectionImages/Publications/ATA%20News/54-11/iStock-1164543414%20(L).jpg");
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+footer {
+  padding: 80px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  width: 500px;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+ul.show {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+}
+h1 {
+  font-size: 90px;
+  margin: 0;
+}
+h2 {
+  font-size: 60px;
+}
+p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+}
+.hero-text {
+  margin-left: 80px;
+  margin-bottom: 180px;
+}
+.subtext {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hero-area {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.socials {
+  padding-bottom: 200px;
+}
+.button {
+  width: 170px;
+  height: 45px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: coral;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.button:hover {
+  background-color: rgb(159, 177, 56);
+}
+.button:active {
+  background-color: #898989;
+  color: #808080;
+}
+.logo {
+  height: 80px;
+  margin: 30px;
+}
+.social {
+  margin: 10px;
+}
+.sub-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+}
+.sub-section-alt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px;
+}
+.headshot {
+  width: 300px;
+  border-radius: 170px;
+}
+.headshot-container {
+  display: flex;
+  align-items: center;
+}
+.project-card {
+  width: 300px;
+  height: 500px;
+  box-shadow: 5px 5px 20px rgb(158, 155, 155);
+  margin: 10px;
+}
+.project-container {
+  display: flex;
+  justify-content: space-around;
+}
+.project-img {
+  margin-top: 25px;
+  width: 225px;
+  border-radius: 125px;
+}
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.project-link {
+  text-decoration: none;
+  color: rgb(159, 177, 56);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+.hamburger:focus {
+  outline: 0;
+}
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display: block;
+    border: 0px;
+    background-color: crimson;
+    height: 30px;
+    width: 40px;
+    margin: 30px;
+    align-self: flex-end;
+  }
+
+  ul {
+    display: none;
+    background-color: #484c5c;
+    margin: 0px;
+  }
+
+  ul.show {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #484c5c;
+  }
+  .logo {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .body {
+    width: 100%;
+  }
+}
