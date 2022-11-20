@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrichoice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC " crossorigin="anonymous ">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="table-06/css/style.css">
+    <style>
+        .w3-button {
+            width: 150px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="static/images/nutrichoice_jamal.png" style="width:170px ; height:30px ;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/" style="color: black;">Home</a>
+                    {% if 'username' in session: %}
+                        <a class="nav-link" href="/uploader" style="color: black;">Check food details</a>
+                    {% else: %}
+                        <a class="nav-link" href="/login" style="color: black;">Check food details</a>
+                    {% endif %}
+                    {% if 'username' in session: %}
+                    <a class="nav-link" href="/foodinfo" style="color: black;">Upload History</a>
+                    {% else: %}
+                        <a class="nav-link" href="/login" style="color: black;">Upload History</a>
+                    {% endif %}
+                    {% if 'username' not in session: %}
+                        <a class="nav-link" href="/login" style="color: black;">Login</a>
+                    {% else: %}
+                        <a class="nav-link" href="#" style="color: black;">
+                            {{ username }}
+                        </a>
+                        <a class="nav-link" href="/logout" style="color: black;">Logout</a>
+                    {% endif %}    
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-4">
+                <h2 class="heading-section">Your Uploaded Images</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table">
+                      <thead class="thead-primary">
+                        <tr class=".text-center">
+                            <th>Food Item</th>
+                            <th>Click To Learn More</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for row in files %}
+                        <tr class="alert" role="alert">
+                            <td>
+                                <img class="pic" src="{{row[0]}}" style="width:100px ;height:100px;">
+                            </td>
+                            <td>
+                                <a href="/nutritioninfo/{{row[1]}}"><button  style="width: 30%;" type="submit" class="btn btn-outline-primary">Learn More..</button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+{%  endblock %}
