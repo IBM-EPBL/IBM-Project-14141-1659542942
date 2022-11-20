@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>Nutrichoice</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}"> -->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/up.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+{% endblock %}
+
+
+
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/"><img src="static/images/nutrichoice_jamal.png" style="width:170px ; height:30px ;"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon "></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-link" href="/" style="font-weight: bold">Home</a>
+					{% if 'username' in session: %}
+						<a class="nav-link" href="/uploader" style="font-weight: bold">Check food details</a>
+					{% else: %}
+						<a class="nav-link" href="/login" style="font-weight: bold">Check food details</a>
+					{% endif %}
+					{% if 'username' in session: %}
+					<a class="nav-link" href="/foodinfo" style="font-weight: bold">Upload History</a>
+					{% else: %}
+						<a class="nav-link" href="/login" style="font-weight: bold">Upload History</a>
+					{% endif %}
+					{% if 'username' not in session: %}
+						<a class="nav-link" href="/login" style="font-weight: bold">Login</a>
+					{% else: %}
+							<a class="nav-link" href="#" style="font-weight: bold">
+								{{ username }}
+							</a>
+							<a class="nav-link" href="/logout" style="font-weight: bold">Logout</a>
+						{% endif %}    
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="bg">
+	<form action="/uploader" method="POST" enctype = "multipart/form-data">
+		<input type="file" name = "file" multiple>
+		<p>Drag your files here or click in this area.</p>
+		<button type="submit">Upload</button>
+	</form>
+	<div class="col-lg-6">
+		<img src="/static/images/mainimage.jpg" alt="">
+	</div>
+</div>
+
+	  
+	     
+  
+{%  endblock %}
