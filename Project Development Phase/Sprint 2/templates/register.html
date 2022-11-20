@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% from "_render_field.html" import render_error_field %}
+
+{% block head %}
+<title>Registration</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/login_style.css')}}">
+<link rel="icon" type="image/png" href="static/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+{% endblock %}
+
+{% block body %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="POST" action="{{ url_for('signup') }}" novalidate>
+                {{ form.csrf_token }}
+                <span class="login100-form-title">
+                    Sign In
+                </span>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+                    {{ form.username(class="input100", placeholder="Username") }}
+                    <span class="focus-input100"></span>
+                </div>
+                {{ render_error_field(form.username) }}
+                <div class="wrap-input100 validate-input" data-validate = "Please enter Email">
+                    {{ form.email(class="input100", placeholder="Email") }}
+                    <span class="focus-input100"></span>
+                </div> 
+                {{ render_error_field(form.email) }}
+                <br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter New Password">
+                    {{ form.pass1(class="input100", placeholder="New Password", id='pwd') }}
+                    <span class="focus-input100"></span>
+                </div> 
+                {{ render_error_field(form.pass1) }}
+                <br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter Confirm Password">
+                    {{ form.pass2(class="input100", placeholder="Confirm Password", id='pwd1') }}
+                    <span class="focus-input100"></span>
+                </div>
+                {{ render_error_field(form.pass2) }}
+                <br>
+                <div class="container-login100-form-btn">
+                    <input type="submit" value="Register" class="login100-form-btn">
+                </div>
+                <div class="flex-col-c p-t-70 p-b-40">
+                    <span class="txt1 p-b-9">Already have an account?</span>
+                    <a href="/login" class="txt3">Login</a>
+                </div>  
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

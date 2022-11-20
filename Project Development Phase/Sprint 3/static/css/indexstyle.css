@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+.navbar {
+    padding: 30px 40px;
+    height: auto;
+    min-height: 12vh;
+}
+
+.nav-link {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .container-fluid .navbar-brand {
+    font-weight: 500;
+    font-size: 30px;
+    margin: 2%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .container-fluid img {
+    margin-left: -3%;
+}
+
+.navbar .container-fluid .navbar-nav .nav-link {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.vac {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Nutrition-among-Indians-Source_1200x768.jpeg?size=690:388);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: left;
+}
+
+.top {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Nutrition-among-Indians-Source_1200x768.jpeg?size=690:388);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.main-content {
+    margin: 60px 100px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    padding-top: 70px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title {
+    padding-top: 50px;
+}
+
+.container {
+    position: relative;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 2000px;
+    flex-wrap: wrap;
+}
+
+.container .dis {
+    display: flex;
+}
+
+.abt hr {
+    width: 0%;
+    min-width: 20%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.cnt {
+    color: white;
+    min-height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://www.axisbank.com/images/default-source/revamp_new/contact-us/contactus.jpg);
+}
+
+.cnt hr {
+    width: 0%;
+    min-width: 20%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.adv hr {
+    width: 0%;
+    min-width: 35%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.row {
+    font-size: medium;
+}
+
+.bt-sec {
+    padding-top: 25px;
+}
+
+.bt {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.bt:focus,
+.bt:hover {
+    background: #ffffff;
+    color: #f415fc;
+    transition: 0.5s;
+}
+
+.bt:active {
+    background: white;
+    color: #c6fc15;
+}
+
+.what h1 {
+    padding-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.why h1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container hr {
+    width: 0%;
+    min-width: 35%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(145, 17, 128);
+    position: relative;
+    margin-bottom: 2%;
+}
+
+.zr {
+    justify-content: center;
+    align-items: center;
+}
+
+.zr img {
+    position: relative;
+    width: 250px;
+    height: 200px;
+}
+
+.zr p {
+    text-align: center;
+    font-size: 20px;
+    padding: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container ul {
+    padding-top: 50px;
+}
+
+.container ul li {
+    margin: 10px 0px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.bton {
+    position: relative;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 2000px;
+    flex-wrap: wrap;
+}
+
+.how {
+    align-items: center;
+}
+
+iframe {
+    width: 800px;
+    height: 480px;
+}
+
+.bt-sec {
+    padding-top: 25px;
+}
+
+.team .title,
+.goal .title {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.team,
+.goal {
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.why .row .col img {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin-left: 20%;
+}
+
+.team .row .col img,
+.goal .row .col img {
+    margin-left: 20%;
+}
+
+.goal .hr1,
+.team .hr1 {
+    width: 0%;
+    min-width: 10%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(145, 17, 128);
+    position: relative;
+}

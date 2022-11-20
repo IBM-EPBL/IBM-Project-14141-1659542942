@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>Nutrichoice</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
+{% endblock %}
+
+{% block body %}
+<section class="top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="static/images/nutrichoice.png" style="width:170px ; height:30px ;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                        {% if 'username' in session: %}
+                            <a class="nav-link" href="/uploader">Check food details</a>
+                        {% else: %}
+                            <a class="nav-link" href="/login">Check food details</a>
+                        {% endif %}
+                        {% if 'username' in session: %}
+                            <a class="nav-link" href="/foodinfo">Upload History</a>
+                        {% else: %}
+                            <a class="nav-link" href="/login">Upload History</a>
+                        {% endif %}
+                        {% if 'username' not in session: %}
+                            <a class="nav-link" href="/login">Login</a>
+                        {% else: %}
+                                <a class="nav-link" href="#">
+                                    {{ username }}
+                                </a>
+                                <a class="nav-link" href="/logout">Logout</a>
+                            {% endif %}    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content ">
+            <h1>With Nutrichoice, Check your food details easily</h1><br>
+            <div class="bt-sec ">
+                {% if 'username' in session: %}
+                <a href="/uploader"><button class="bt bg-transparent">Click To Check the food details</button></a>
+                {% else: %}
+                <a href="/login"><button class="bt bg-transparent">Click To Check the food details</button></a>
+                {% endif %}
+            </div>
+        </div>
+</section>
+<a href="" id="what"></a>
+    <section class="what ">
+        <div class="container text-center what ">
+            <h1 class="title ">WHAT IS Nutrichoice?</h1>
+            <hr>
+            <div class="row ">
+                <div class="col zr ">
+                    <img src="https://www.pngall.com/wp-content/uploads/5/Healthy-Diet-PNG-Image.png">
+                    <p>Nutrichoice is an excellent platform for dietitians and nutritionists to help keep their clients in the loop and on track. It’s a great app that is easy to use and has everything you need from content creation to scheduling to meal plans and client communication.
+                        I’ve especially liked the meal planning aspect as I’ve been able to design very specific meal plans to meet client needs, and the nutritional report that is generated with each meal plan is very helpful.   
+                        I highly recommend NutritIO to all dietitians and nutritionists working with their own clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href=" " id="why"></a>
+    <section class="what">
+        <div class="container text-center what ">
+            <h1 class="title ">Why Nutrichoice?</h1>
+            <hr>
+            <div class="row ">
+                <div class="col zr ">
+                    <img src="https://img.freepik.com/free-vector/healthy-vs-unhealthy-food-flat-illustration_74855-18384.jpg?w=2000" style="height: 300px; width: 400px;">
+                    <p>Nutrichoice is very user-friendly application.Create personalized nutritional plans faster than it takes to make a sandwich, allowing you to handle far more clients in less time. Just by uploading the image of your food, You can get the macronutritions of the food so that you can 
+                        have a perfect diet plan in your fitness journey. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+{% endblock %}
